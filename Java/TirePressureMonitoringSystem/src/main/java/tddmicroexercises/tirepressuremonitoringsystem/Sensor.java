@@ -9,9 +9,8 @@ public class Sensor {
     public static final double OFFSET = 16;
 
     public double popNextPressurePsiValue() {
-        double pressureTelemetryValue = randomSamplePressure();
 
-        return OFFSET + pressureTelemetryValue;
+        return OFFSET + randomSamplePressure();
     }
 
     private static double randomSamplePressure() {
