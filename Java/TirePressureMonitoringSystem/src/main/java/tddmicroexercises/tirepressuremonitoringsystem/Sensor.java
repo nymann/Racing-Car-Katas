@@ -9,12 +9,12 @@ public class Sensor {
     public static final double OFFSET = 16;
 
     public double popNextPressurePsiValue() {
-        double pressureTelemetryValue = samplePressure();
+        double pressureTelemetryValue = randomSamplePressure();
 
         return OFFSET + pressureTelemetryValue;
     }
 
-    private static double samplePressure() {
+    private static double randomSamplePressure() {
         // placeholder implementation that simulate a real sensor in a real tire
         Random basicRandomNumbersGenerator = new Random();
         return 6 * basicRandomNumbersGenerator.nextDouble() * basicRandomNumbersGenerator.nextDouble();
